@@ -1,4 +1,3 @@
 require("dotenv").config();
-import { slackWorkflow } from "./examples/slack-message";
-
-slackWorkflow();
+import { postMessage } from "./examples/slack-message";
+postMessage.listen();

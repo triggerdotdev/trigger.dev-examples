@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "description": "A set of examples of Trigger.dev workflows",
   "dependencies": {
-    "@trigger.dev/integrations": "^0.1.1",
-    "@trigger.dev/sdk": "^0.1.1"
+    "@trigger.dev/integrations": "^0.1.2",
+    "@trigger.dev/sdk": "^0.1.2"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
