@@ -8,28 +8,23 @@ export function githubWorkflow() {
     name: "Notify of critical issues",
     logLevel: "debug",
     on: github.events.repoIssueEvent({
-      repo: "triggerdotdev/trigger.dev"
+      repo: "triggerdotdev/trigger.dev",
     }),
     run: async (event, ctx) => {
-      if (event.action !== "opened") {
-        return;
+      if (event.action === "labeled") {
+        await ctx.logger.info(
+          `The issue ${event.issue.title} was labeled ${event.label.name}`
+        );
+
+        if (event.label.name === "critical") {
+          await slack.postMessage("send-to-slack", {
+            channel: "serious-issues",
+            text: `Critical issue: ${event.issue.title} was labeled ${event.label.name}`,
+          });
+        }
       }
 
-      if (event.issue.severity !== "critical") {
-        await ctx.logger.info(`The issue ${event.issue.} was only ${event.issue.severity}`);
-        return;
-      }
-
-      await ctx.logger.info("This log will appear on the Trigger.dev run page");
-
-      //send a message to the #test-integrations Slack channel
-      //it uses the message text that was passed in the event
-      const response = await slack.postMessage("send-to-slack", {
-        channel: "test-integrations",
-        text: event.message,
-      });
-
-      return response.message;
+      return event;
     },
   });
 

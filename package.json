@@ -10,7 +10,9 @@
   },
   "scripts": {
     "dev": "tsx src/index.ts",
+    "github": "tsx src/examples/github-webhook.ts",
     "slack": "tsx src/examples/slack-message.ts",
+    "shopify": "tsx src/examples/shopify.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts"
   },
