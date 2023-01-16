@@ -9,7 +9,6 @@
     "zod": "^3.20.2"
   },
   "scripts": {
-    "dev": "tsx src/index.ts",
     "github": "tsx src/examples/github-webhook.ts",
     "slack": "tsx src/examples/slack-message.ts",
     "shopify": "tsx src/examples/shopify.ts",
