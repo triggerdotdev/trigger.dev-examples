@@ -5,7 +5,7 @@ import { z } from "zod";
 new Trigger({
   id: "shopify-product-variants",
   name: "Shopify product variants",
-  apiKey: "trigger_development_mLpn9DEEqCRR",
+  apiKey: "trigger_development_QOvDmN0TNgfK",
   logLevel: "debug",
   on: customEvent({
     name: "shopify.product-variants",

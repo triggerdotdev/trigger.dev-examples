@@ -5,6 +5,7 @@ import { github, slack } from "@trigger.dev/integrations";
 const trigger = new Trigger({
   id: "github-issue-to-slack-message",
   name: "Notify of critical issues",
+  apiKey: "trigger_development_QOvDmN0TNgfK",
   logLevel: "debug",
   on: github.events.issueEvent({
     repo: "triggerdotdev/trigger.dev",

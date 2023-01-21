@@ -4,14 +4,15 @@
   "version": "0.0.1",
   "description": "A set of examples of Trigger.dev workflows",
   "dependencies": {
-    "@trigger.dev/integrations": "^0.1.6",
-    "@trigger.dev/sdk": "^0.2.3",
+    "@trigger.dev/integrations": "^0.1.8",
+    "@trigger.dev/sdk": "^0.2.5",
     "zod": "^3.20.2"
   },
   "scripts": {
     "github": "tsx src/examples/github-webhook.ts",
     "slack": "tsx src/examples/slack-message.ts",
     "shopify": "tsx src/examples/shopify.ts",
+    "scheduled": "tsx src/examples/scheduled.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts"
   },
