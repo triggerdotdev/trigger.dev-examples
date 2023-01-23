@@ -5,7 +5,7 @@ import { github, slack } from "@trigger.dev/integrations";
 const trigger = new Trigger({
   id: "github-issue-to-slack-message",
   name: "Notify of critical issues",
-  apiKey: "trigger_development_QOvDmN0TNgfK",
+  apiKey: "trigger_development_xVENvPFYfhdc",
   logLevel: "debug",
   on: github.events.issueEvent({
     repo: "triggerdotdev/trigger.dev",
@@ -29,3 +29,16 @@ const trigger = new Trigger({
 });
 
 trigger.listen();
+
+new Trigger({
+  id: "github-pr",
+  name: "Notify of prs",
+  apiKey: "trigger_development_xVENvPFYfhdc",
+  logLevel: "debug",
+  on: github.events.pullRequestEvent({
+    repo: "triggerdotdev/trigger.dev",
+  }),
+  run: async (event, ctx) => {
+    return event;
+  },
+}).listen();

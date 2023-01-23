@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "description": "A set of examples of Trigger.dev workflows",
   "dependencies": {
-    "@trigger.dev/integrations": "^0.1.8",
-    "@trigger.dev/sdk": "^0.2.5",
+    "@trigger.dev/integrations": "^0.1.9",
+    "@trigger.dev/sdk": "^0.2.6",
     "zod": "^3.20.2"
   },
   "scripts": {
