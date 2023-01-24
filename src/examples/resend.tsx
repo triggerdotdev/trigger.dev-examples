@@ -3,6 +3,7 @@ import { customEvent, Trigger } from "@trigger.dev/sdk";
 import React from "react";
 import { z } from "zod";
 import { getUser } from "../db";
+import { WelcomeEmail } from "./email-templates";
 
 new Trigger({
   id: "welcome-email-campaign",
@@ -57,15 +58,6 @@ new Trigger({
     //etc...
   },
 }).listen();
-
-function WelcomeEmail({ name }: { name: string }) {
-  return (
-    <div>
-      <h1>Welcome to Trigger.dev</h1>
-      <p>Hi {name}</p>
-    </div>
-  );
-}
 
 function TipsEmail({ name }: { name: string }) {
   return (
