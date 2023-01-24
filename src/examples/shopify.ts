@@ -2,10 +2,14 @@ import { shopify } from "@trigger.dev/integrations";
 import { customEvent, Trigger } from "@trigger.dev/sdk";
 import { z } from "zod";
 
+/*JSON
+{}
+*/
+
 new Trigger({
   id: "shopify-product-variants",
   name: "Shopify product variants",
-  apiKey: "trigger_development_QOvDmN0TNgfK",
+  apiKey: "trigger_development_rzWPDP3cCuBB",
   logLevel: "debug",
   on: customEvent({
     name: "shopify.product-variants",

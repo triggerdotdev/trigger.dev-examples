@@ -2,10 +2,18 @@ import { Trigger, customEvent } from "@trigger.dev/sdk";
 import { slack } from "@trigger.dev/integrations";
 import { z } from "zod";
 
+/*JSON
+{
+  "name": "James Ritchie",
+  "email": "james@trigger.dev",
+  "paidPlan": true
+}
+*/
+
 const postMessage = new Trigger({
   id: "new-user",
   name: "New user slack message",
-  apiKey: "trigger_development_QOvDmN0TNgfK",
+  apiKey: "trigger_development_6z1IgfWNqwc3",
   logLevel: "info",
   on: customEvent({
     name: "user.created",
