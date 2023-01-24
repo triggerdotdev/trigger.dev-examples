@@ -13,5 +13,5 @@ npm install
 Run an example with your API Key as an env variable:
 
 ```sh
-TRIGGER_API_KEY="trigger_development_vzNnO2DGBGcG" npm run github
+TRIGGER_API_KEY="trigger_development_vzNnO2DGBGcG" npm run github # see package.json for more
 ```
