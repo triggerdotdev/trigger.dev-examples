@@ -100,7 +100,7 @@ export function WelcomeEmail({ name }: { name?: string }) {
         <Text style={paragraph}>CEO, Trigger.dev</Text>
       </Section>
       <Img
-        src="https://app.trigger.dev/build/_assets/logo-SITOLUB3.png"
+        src="https://github.com/triggerdotdev/trigger.dev-examples/blob/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png?raw=true"
         width="150px"
         height="auto"
       />
@@ -151,7 +151,7 @@ export function TipsEmail({ name }: { name: string }) {
         <Text style={paragraph}>CEO, Trigger.dev</Text>
       </Section>
       <Img
-        src="https://app.trigger.dev/build/_assets/logo-SITOLUB3.png"
+        src="https://github.com/triggerdotdev/trigger.dev-examples/blob/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png?raw=true"
         width="150px"
         height="auto"
       />
@@ -204,7 +204,7 @@ export function InactiveEmail({ name }: { name: string }) {
         </Text>
       </Section>
       <Img
-        src="https://app.trigger.dev/build/_assets/logo-SITOLUB3.png"
+        src="https://github.com/triggerdotdev/trigger.dev-examples/blob/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png?raw=true"
         width="150px"
         height="auto"
       />
