@@ -33,7 +33,7 @@ new Trigger({
       react: <WelcomeEmail name={user.name} />,
     });
 
-    //wait 1 day, check if the user has onboarded and send the appropriate email
+    //wait 1 day, check if the user has created a workflow and send the appropriate email
     await context.waitFor("wait-a-while", { seconds: 10 });
     const updatedUser = await getUser(event.userId);
     if (updatedUser.hasOnboarded) {
