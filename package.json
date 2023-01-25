@@ -29,6 +29,8 @@
     "scheduled": "tsx src/examples/scheduled.ts",
     "osv-dev": "tsx src/examples/osv-dev.ts",
     "resend": "tsx src/examples/resend.tsx",
+    "webhook": "tsx src/examples/generic-webhook.ts",
+    "send-event": "tsx src/examples/send-event.ts",
     "users-to-slack": "tsx src/examples/populate-slack-with-users.tsx",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts"
