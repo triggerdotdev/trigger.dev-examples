@@ -4,11 +4,6 @@
   "version": "0.0.1",
   "description": "A set of examples of Trigger.dev workflows",
   "dependencies": {
-    "@trigger.dev/integrations": "^0.1.10",
-    "@trigger.dev/sdk": "^0.2.7",
-    "vuln-vects": "^1.1.0",
-    "react": "^18.2.0",
-    "zod": "^3.20.2",
     "@react-email/button": "^0.0.4",
     "@react-email/container": "^0.0.4",
     "@react-email/head": "^0.0.2",
@@ -20,7 +15,12 @@
     "@react-email/preview": "^0.0.2",
     "@react-email/render": "^0.0.3",
     "@react-email/section": "^0.0.1",
-    "@react-email/text": "^0.0.2"
+    "@react-email/text": "^0.0.2",
+    "@trigger.dev/integrations": "^0.1.11",
+    "@trigger.dev/sdk": "^0.2.8",
+    "react": "^18.2.0",
+    "vuln-vects": "^1.1.0",
+    "zod": "^3.20.2"
   },
   "scripts": {
     "github": "tsx src/examples/github-webhook.ts",
