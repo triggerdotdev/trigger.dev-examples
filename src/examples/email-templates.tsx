@@ -100,9 +100,10 @@ export function WelcomeEmail({ name }: { name?: string }) {
         <Text style={paragraph}>CEO, Trigger.dev</Text>
       </Section>
       <Img
-        src="https://github.com/triggerdotdev/trigger.dev-examples/blob/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png?raw=true"
+        src="https://raw.githubusercontent.com/triggerdotdev/trigger.dev-examples/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png"
         width="150px"
         height="auto"
+        className="mb-4"
       />
     </Html>
   );
@@ -151,9 +152,10 @@ export function TipsEmail({ name }: { name: string }) {
         <Text style={paragraph}>CEO, Trigger.dev</Text>
       </Section>
       <Img
-        src="https://github.com/triggerdotdev/trigger.dev-examples/blob/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png?raw=true"
+        src="https://raw.githubusercontent.com/triggerdotdev/trigger.dev-examples/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png"
         width="150px"
         height="auto"
+        className="mb-4"
       />
     </Html>
   );
@@ -204,9 +206,10 @@ export function InactiveEmail({ name }: { name: string }) {
         </Text>
       </Section>
       <Img
-        src="https://github.com/triggerdotdev/trigger.dev-examples/blob/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png?raw=true"
+        src="https://raw.githubusercontent.com/triggerdotdev/trigger.dev-examples/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png"
         width="150px"
         height="auto"
+        className="mb-4"
       />
     </Html>
   );
