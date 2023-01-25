@@ -3,7 +3,7 @@ export async function getUser(userId: string, hasOnboarded = false) {
   return {
     id: userId,
     name: "Kiera Ashley",
-    email: "kiera@meta.com",
+    email: "james@trigger.dev",
     hasOnboarded,
   };
 }

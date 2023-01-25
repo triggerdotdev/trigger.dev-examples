@@ -166,11 +166,11 @@ export function InactiveEmail({ name }: { name: string }) {
       <Section>
         <Text style={paragraph}>Hi {name ?? "there"},</Text>
         <Text style={paragraph}>
-          We noticed that you haven't signed up for Trigger.dev yet. We
+          We noticed that you haven't created a workflow on Trigger.dev yet. We
           understand that you're busy and have many options when it comes to
-          development tools, but we want to remind you that Trigger is designed
-          to make your workflow development process easier, faster, and more
-          efficient.
+          development tools, but we want to remind you that Trigger.dev is
+          designed to make your workflow development process easier, faster, and
+          more efficient.
         </Text>
         <Text style={paragraph}>
           With Trigger, you can create workflows easily in code, saving you time
@@ -178,12 +178,18 @@ export function InactiveEmail({ name }: { name: string }) {
           who can provide support and share their own workflow solutions.
         </Text>
         <Text style={paragraph}>
-          Don't miss out on the benefits of Trigger. Sign up now and start
-          creating valuable workflows in no time.
+          You can create your first workflow easily by checking out the
+          documentation{" "}
+          <Link style={anchor} href="https://docs.trigger.dev">
+            here
+          </Link>{" "}
+          or by{" "}
+          <Link style={anchor} href="mailto:help@trigger.dev">
+            getting in touch
+          </Link>{" "}
+          with us directly. We'll happily help answer any questions you have and
+          help create your first workflow.
         </Text>
-        <Link style={anchor} href="https://trigger.dev">
-          Sign Up Now
-        </Link>
         <Text style={paragraph}>
           If you have any questions or concerns, please don't hesitate to reach
           out to us.
