@@ -1,5 +1,5 @@
 import { resend, slack } from "@trigger.dev/integrations";
-import { customEvent, Trigger } from "@trigger.dev/sdk";
+import { customEvent, Trigger, sendEvent } from "@trigger.dev/sdk";
 import React from "react";
 import { z } from "zod";
 import { getUser } from "../db";
@@ -8,7 +8,7 @@ import { InactiveEmail, TipsEmail, WelcomeEmail } from "./email-templates";
 new Trigger({
   id: "welcome-email-campaign",
   name: "Welcome email drip campaign",
-  apiKey: "trigger_development_hOOzMfDV2G04",
+  apiKey: "trigger_development_BK1A7mDk2JTC",
   on: customEvent({
     name: "user.created",
     schema: z.object({
@@ -26,28 +26,32 @@ new Trigger({
 
     //Send the first email
     const welcomeResponse = await resend.sendEmail("welcome-email", {
-      from: "james@email.trigger.dev",
-      replyTo: "james@trigger.dev",
+      from: "Trigger.dev <james@email.trigger.dev>",
+      replyTo: "James <james@trigger.dev>",
       to: user.email,
       subject: "Welcome to Trigger.dev",
       react: <WelcomeEmail name={user.name} />,
     });
+    await context.logger.debug(
+      `Sent welcome email to ${welcomeResponse.to} with id ${welcomeResponse.id}`
+    );
 
     //wait 1 day, check if the user has created a workflow and send the appropriate email
     await context.waitFor("wait-a-while", { seconds: 10 });
     const updatedUser = await getUser(event.userId);
+
     if (updatedUser.hasOnboarded) {
       await resend.sendEmail("onboarding-complete", {
-        from: "james@email.trigger.dev",
-        replyTo: "james@trigger.dev",
+        from: "Trigger.dev <james@email.trigger.dev>",
+        replyTo: "James <james@trigger.dev>",
         to: updatedUser.email,
         subject: "Pro tips for workflows",
         react: <TipsEmail name={updatedUser.name} />,
       });
     } else {
       await resend.sendEmail("onboarding-incomplete", {
-        from: "james@email.trigger.dev",
-        replyTo: "james@trigger.dev",
+        from: "Trigger.dev <james@email.trigger.dev>",
+        replyTo: "James <james@trigger.dev>",
         to: updatedUser.email,
         subject: "Help with your first workflow",
         react: <InactiveEmail name={updatedUser.name} />,
