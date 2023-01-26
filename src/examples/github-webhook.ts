@@ -3,8 +3,9 @@ import { github, slack } from "@trigger.dev/integrations";
 
 // Workflow that notifies you of critical GitHub issues
 const trigger = new Trigger({
-  id: "github-issue-to-slack-message",
+  id: "github-issue-to-slack-message-2",
   name: "Notify of critical issues",
+  apiKey: "trigger_development_koOZKGrjnt1S",
   logLevel: "debug",
   on: github.events.issueEvent({
     repo: "triggerdotdev/trigger.dev-examples",

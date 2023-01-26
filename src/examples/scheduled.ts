@@ -2,9 +2,9 @@ import { slack } from "@trigger.dev/integrations";
 import { scheduleEvent, Trigger } from "@trigger.dev/sdk";
 
 new Trigger({
-  id: "new-user",
-  name: "New user slack message",
-  apiKey: "trigger_development_QOvDmN0TNgfK",
+  id: "scheduled-test",
+  name: "Scheduled slack message",
+  apiKey: "trigger_development_koOZKGrjnt1S",
   logLevel: "info",
   on: scheduleEvent({
     rateOf: {

@@ -124,6 +124,7 @@ type NPMPackageMetadata = z.infer<typeof packageSchema>;
 new Trigger({
   id: "check-for-vulns",
   name: "Notify me of critical vulnerabilities in my GitHub repo",
+  apiKey: "trigger_development_koOZKGrjnt1S",
   on: customEvent({
     name: "check.vulns",
     schema: z.object({ package: z.string() }),
@@ -164,7 +165,12 @@ new Trigger({
 new Trigger({
   id: "check-vulns-every-hour",
   name: "Check for vulnerabilities every hour",
-  on: scheduleEvent({ cron: "0 * * * *" }),
+  apiKey: "trigger_development_koOZKGrjnt1S",
+  on: scheduleEvent({
+    rateOf: {
+      minutes: 1,
+    },
+  }),
   run: async (event, ctx) => {
     await ctx.sendEvent(`check.vulns`, {
       name: "check.vulns",

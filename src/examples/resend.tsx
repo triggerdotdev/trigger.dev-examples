@@ -8,7 +8,7 @@ import { InactiveEmail, TipsEmail, WelcomeEmail } from "./email-templates";
 new Trigger({
   id: "welcome-email-campaign",
   name: "Welcome email drip campaign",
-  apiKey: "trigger_development_BK1A7mDk2JTC",
+  apiKey: "trigger_development_koOZKGrjnt1S",
   on: customEvent({
     name: "user.created",
     schema: z.object({

@@ -13,7 +13,7 @@ import { z } from "zod";
 const postMessage = new Trigger({
   id: "new-user",
   name: "New user slack message",
-  apiKey: "trigger_development_6z1IgfWNqwc3",
+  apiKey: "trigger_development_koOZKGrjnt1S",
   logLevel: "info",
   on: customEvent({
     name: "user.created",
