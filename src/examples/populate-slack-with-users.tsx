@@ -27,7 +27,6 @@ const users = [
 new Trigger({
   id: "new-users",
   name: "New users",
-  apiKey: "trigger_development_hOOzMfDV2G04",
   on: customEvent({
     name: "slack.new.user",
     schema: z.object({}),

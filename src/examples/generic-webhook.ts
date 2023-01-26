@@ -1,6 +1,8 @@
 import { slack } from "@trigger.dev/integrations";
 import { Trigger, webhookEvent } from "@trigger.dev/sdk";
 import { z } from "zod";
+import dotenv from "dotenv";
+dotenv.config();
 
 const intl = new Intl.DateTimeFormat("en-US", {
   timeStyle: "full",
@@ -10,7 +12,6 @@ const intl = new Intl.DateTimeFormat("en-US", {
 new Trigger({
   id: "caldotcom-to-slack-2",
   name: "Cal.com To Slack 2",
-  apiKey: "trigger_development_koOZKGrjnt1S",
   on: webhookEvent({
     service: "cal.com",
     eventName: "BOOKING_CREATED",

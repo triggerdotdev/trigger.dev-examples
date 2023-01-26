@@ -1,6 +1,8 @@
 import { Trigger, customEvent } from "@trigger.dev/sdk";
 import { slack } from "@trigger.dev/integrations";
 import { z } from "zod";
+import dotenv from "dotenv";
+dotenv.config();
 
 /*JSON
 {
@@ -13,7 +15,6 @@ import { z } from "zod";
 const postMessage = new Trigger({
   id: "new-user",
   name: "New user slack message",
-  apiKey: "trigger_development_koOZKGrjnt1S",
   logLevel: "info",
   on: customEvent({
     name: "user.created",

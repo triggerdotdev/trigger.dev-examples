@@ -1,10 +1,11 @@
 import { slack } from "@trigger.dev/integrations";
 import { scheduleEvent, Trigger } from "@trigger.dev/sdk";
+import dotenv from "dotenv";
+dotenv.config();
 
 new Trigger({
   id: "scheduled-test",
   name: "Scheduled slack message",
-  apiKey: "trigger_development_koOZKGrjnt1S",
   logLevel: "info",
   on: scheduleEvent({
     rateOf: {

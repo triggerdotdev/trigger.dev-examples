@@ -1,14 +1,15 @@
 import { resend, slack } from "@trigger.dev/integrations";
-import { customEvent, Trigger, sendEvent } from "@trigger.dev/sdk";
+import { customEvent, Trigger } from "@trigger.dev/sdk";
 import React from "react";
 import { z } from "zod";
 import { getUser } from "../db";
 import { InactiveEmail, TipsEmail, WelcomeEmail } from "./email-templates";
+import dotenv from "dotenv";
+dotenv.config();
 
 new Trigger({
   id: "welcome-email-campaign",
   name: "Welcome email drip campaign",
-  apiKey: "trigger_development_koOZKGrjnt1S",
   on: customEvent({
     name: "user.created",
     schema: z.object({

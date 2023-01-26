@@ -1,6 +1,8 @@
 import { shopify } from "@trigger.dev/integrations";
 import { customEvent, Trigger } from "@trigger.dev/sdk";
 import { z } from "zod";
+import dotenv from "dotenv";
+dotenv.config();
 
 /*JSON
 {}
@@ -9,7 +11,6 @@ import { z } from "zod";
 new Trigger({
   id: "shopify-product-variants",
   name: "Shopify product variants",
-  apiKey: "trigger_development_rzWPDP3cCuBB",
   logLevel: "debug",
   on: customEvent({
     name: "shopify.product-variants",
@@ -38,7 +39,7 @@ new Trigger({
       ],
       price: "12.34",
       sku: `variant-${Math.floor(Math.random() * 1000)}`,
-      options: ["large", "cotton"],
+      options: ["large", "lycra"],
     });
 
     return newVariant;

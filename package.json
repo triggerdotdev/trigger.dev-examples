@@ -16,8 +16,8 @@
     "@react-email/render": "^0.0.3",
     "@react-email/section": "^0.0.1",
     "@react-email/text": "^0.0.2",
-    "@trigger.dev/integrations": "^0.1.11",
-    "@trigger.dev/sdk": "^0.2.8",
+    "@trigger.dev/integrations": "^0.1.14",
+    "@trigger.dev/sdk": "^0.2.10",
     "react": "^18.2.0",
     "vuln-vects": "^1.1.0",
     "zod": "^3.20.2"

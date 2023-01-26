@@ -2,6 +2,8 @@ import { Trigger, scheduleEvent, customEvent, fetch } from "@trigger.dev/sdk";
 import { slack } from "@trigger.dev/integrations";
 import { z } from "zod";
 import { parseCvssVector } from "vuln-vects";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const vulnerabilitySchema = z
   .object({
@@ -124,7 +126,6 @@ type NPMPackageMetadata = z.infer<typeof packageSchema>;
 new Trigger({
   id: "check-for-vulns",
   name: "Notify me of critical vulnerabilities in my GitHub repo",
-  apiKey: "trigger_development_koOZKGrjnt1S",
   on: customEvent({
     name: "check.vulns",
     schema: z.object({ package: z.string() }),
@@ -165,7 +166,6 @@ new Trigger({
 new Trigger({
   id: "check-vulns-every-hour",
   name: "Check for vulnerabilities every hour",
-  apiKey: "trigger_development_koOZKGrjnt1S",
   on: scheduleEvent({
     rateOf: {
       minutes: 1,
