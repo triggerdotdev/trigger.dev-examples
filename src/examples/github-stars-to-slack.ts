@@ -4,7 +4,7 @@ import { Trigger } from "@trigger.dev/sdk";
 new Trigger({
   id: "new-github-star-to-slack",
   name: "New GitHub Star: triggerdotdev/trigger.dev",
-  apiKey: "trigger_development_hO0SUYeeBTuD",
+  apiKey: "trigger_development_5a4Z40beAsVD",
   logLevel: "debug",
   on: github.events.newStarEvent({
     repo: "triggerdotdev/trigger.dev",

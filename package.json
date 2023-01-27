@@ -31,8 +31,8 @@
     "resend": "tsx src/examples/resend.tsx",
     "webhook": "tsx src/examples/generic-webhook.ts",
     "send-event": "tsx src/examples/send-event.ts",
-    "users-to-slack": "tsx src/examples/populate-slack-with-users.tsx",
-    "github-stars": "tsx src/examples/github-stars-to-slack.tsx",
+    "users-to-slack": "tsx src/examples/populate-slack-with-users.ts",
+    "github-stars": "tsx src/examples/github-stars-to-slack.ts",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts"
   },
