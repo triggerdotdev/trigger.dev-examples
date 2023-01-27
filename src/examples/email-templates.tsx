@@ -100,7 +100,7 @@ export function WelcomeEmail({ name }: { name?: string }) {
         <Text style={paragraph}>CEO, Trigger.dev</Text>
       </Section>
       <Img
-        src="https://raw.githubusercontent.com/triggerdotdev/trigger.dev-examples/40aeb639292a16631c9ad5157b96935b41987a15/images/logo-light-grey.png"
+        src="https://app.trigger.dev/build/_assets/logo-SITOLUB3.png"
         width="150px"
         height="auto"
         className="mb-4"
