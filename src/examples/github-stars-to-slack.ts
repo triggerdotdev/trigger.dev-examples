@@ -13,7 +13,7 @@ new Trigger({
   run: async (event) => {
     await slack.postMessage("github-stars", {
       channelName: "github-stars",
-      text: `New GitHub star from ${event.sender.name}`,
+      text: `New GitHub star from \n<${event.sender.html_url}|${event.sender.login}>`,
     });
   },
 }).listen();
