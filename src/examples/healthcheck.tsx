@@ -17,7 +17,6 @@ const BLOCK_ID = "action.buttons";
 new Trigger({
   id: "scheduled-healthcheck",
   name: "Scheduled healthcheck",
-  endpoint: "ws://localhost:8889/ws",
   logLevel: "info",
   on: scheduleEvent({
     rateOf: {
@@ -57,7 +56,6 @@ new Trigger({
 new Trigger({
   id: "healthcheck-retry-interaction",
   name: "Healthcheck retry interaction",
-  endpoint: "ws://localhost:8889/ws",
   on: slack.events.blockActionInteraction({
     blockId: BLOCK_ID,
     actionId: ["retry"],
