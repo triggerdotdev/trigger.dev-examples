@@ -16,8 +16,9 @@
     "@react-email/render": "^0.0.3",
     "@react-email/section": "^0.0.1",
     "@react-email/text": "^0.0.2",
-    "@trigger.dev/integrations": "^0.1.14",
-    "@trigger.dev/sdk": "^0.2.10",
+    "@trigger.dev/integrations": "^0.1.15",
+    "@trigger.dev/sdk": "^0.2.11",
+    "jsx-slack": "^5.3.0",
     "react": "^18.2.0",
     "vuln-vects": "^1.1.0",
     "zod": "^3.20.2"
@@ -25,6 +26,7 @@
   "scripts": {
     "github": "tsx src/examples/github-webhook.ts",
     "slack": "tsx src/examples/slack-message.ts",
+    "slack-blocks": "tsx src/examples/slack-blocks.tsx",
     "shopify": "tsx src/examples/shopify.ts",
     "scheduled": "tsx src/examples/scheduled.ts",
     "osv-dev": "tsx src/examples/osv-dev.ts",
@@ -33,6 +35,8 @@
     "send-event": "tsx src/examples/send-event.ts",
     "users-to-slack": "tsx src/examples/populate-slack-with-users.ts",
     "github-stars": "tsx src/examples/github-stars-to-slack.ts",
+    "whatsapp": "tsx src/examples/whatsapp.ts",
+    "healthcheck": "tsx src/examples/healthcheck.tsx",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts"
   },
