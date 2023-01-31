@@ -12,6 +12,7 @@ new Trigger({
       minutes: 1,
     },
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     await ctx.logger.info("This log will appear on the Trigger.dev run page");
 

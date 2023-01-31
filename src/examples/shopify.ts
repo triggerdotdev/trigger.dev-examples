@@ -16,6 +16,7 @@ new Trigger({
     name: "shopify.product-variants",
     schema: z.object({}),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     await ctx.logger.info("Get Shopify products variants");
 

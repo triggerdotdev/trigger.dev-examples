@@ -23,6 +23,7 @@ new Trigger({
       minutes: 1,
     },
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     const promises = sites.map(async (site) => {
       const up = await isSiteUp(site.url);
@@ -60,6 +61,7 @@ new Trigger({
     blockId: BLOCK_ID,
     actionId: ["retry"],
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     const firstAction = event.actions[0];
     if (!firstAction) return;

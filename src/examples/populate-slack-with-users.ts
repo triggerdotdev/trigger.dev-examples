@@ -31,6 +31,7 @@ new Trigger({
     name: "slack.new.user",
     schema: z.object({}),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   async run(event, context) {
     for (let index = 0; index < users.length; index++) {
       const user = users[index];

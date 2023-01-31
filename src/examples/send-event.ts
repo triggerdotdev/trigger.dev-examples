@@ -12,6 +12,7 @@ new Trigger({
       message: z.string(),
     }),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   async run(event, context) {
     context.logger.debug(`The message is ${event.message}`);
     await sendEvent("start-other-workflow", {

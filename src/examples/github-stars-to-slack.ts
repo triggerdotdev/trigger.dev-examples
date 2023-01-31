@@ -11,7 +11,7 @@ new Trigger({
   on: github.events.newStarEvent({
     repo: "triggerdotdev/trigger.dev",
   }),
-
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event) => {
     await slack.postMessage("github-stars", {
       channelName: "github-stars",
