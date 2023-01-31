@@ -1,4 +1,4 @@
-import { slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
 import { scheduleEvent, Trigger } from "@trigger.dev/sdk";
 import dotenv from "dotenv";
 dotenv.config();

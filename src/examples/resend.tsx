@@ -1,4 +1,5 @@
-import { resend, slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
+import * as resend from "@trigger.dev/resend";
 import { customEvent, Trigger } from "@trigger.dev/sdk";
 import React from "react";
 import { z } from "zod";
@@ -16,6 +17,7 @@ new Trigger({
       userId: z.string(),
     }),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   async run(event, context) {
     //get the user data from the database
     const user = await getUser(event.userId);

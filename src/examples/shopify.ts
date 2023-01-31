@@ -1,4 +1,4 @@
-import { shopify } from "@trigger.dev/integrations";
+import * as shopify from "@trigger.dev/shopify";
 import { customEvent, Trigger } from "@trigger.dev/sdk";
 import { z } from "zod";
 import dotenv from "dotenv";

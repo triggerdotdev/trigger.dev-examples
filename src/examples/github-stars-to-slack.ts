@@ -1,4 +1,5 @@
-import { github, slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
+import * as github from "@trigger.dev/github";
 import { Trigger } from "@trigger.dev/sdk";
 import dotenv from "dotenv";
 dotenv.config();

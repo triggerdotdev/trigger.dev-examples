@@ -1,5 +1,5 @@
 /** @jsxImportSource jsx-slack */
-import { slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
 import { scheduleEvent, Trigger } from "@trigger.dev/sdk";
 import JSXSlack, {
   Actions,
@@ -20,9 +20,10 @@ new Trigger({
   name: "Testing Slack Interactivity",
   on: scheduleEvent({
     rateOf: {
-      minutes: 1,
+      hours: 1,
     },
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     await slack.postMessage("jsx-test", {
       channelName: "test-integrations",
@@ -65,6 +66,7 @@ new Trigger({
     blockId: BLOCK_ID,
     actionId: ["status-blocked", "status-help", "rating"],
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     //create promises from all the actions
     const promises = event.actions.map((action) => {

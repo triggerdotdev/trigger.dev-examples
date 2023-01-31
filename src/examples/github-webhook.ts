@@ -1,5 +1,6 @@
 import { Trigger } from "@trigger.dev/sdk";
-import { github, slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
+import * as github from "@trigger.dev/github";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -7,10 +8,10 @@ dotenv.config();
 const trigger = new Trigger({
   id: "github-issue-to-slack-message-2",
   name: "Notify of critical issues",
-  logLevel: "debug",
   on: github.events.issueEvent({
     repo: "triggerdotdev/trigger.dev-examples",
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     if (event.action === "labeled") {
       await ctx.logger.info(
@@ -19,7 +20,7 @@ const trigger = new Trigger({
 
       if (event.label?.name === "critical") {
         await slack.postMessage("send-to-slack", {
-          channelName: "serious-issues",
+          channelName: "test-integrations",
           text: `Critical issue: ${event.issue.title} was labeled ${event.label.name}`,
         });
       }

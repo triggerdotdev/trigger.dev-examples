@@ -1,5 +1,5 @@
 import { Trigger, customEvent } from "@trigger.dev/sdk";
-import { slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
 import { z } from "zod";
 import dotenv from "dotenv";
 dotenv.config();

@@ -1,5 +1,5 @@
 import { Trigger, scheduleEvent, customEvent, fetch } from "@trigger.dev/sdk";
-import { slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
 import { z } from "zod";
 import { parseCvssVector } from "vuln-vects";
 import dotenv from "dotenv";
@@ -130,6 +130,7 @@ new Trigger({
     name: "check.vulns",
     schema: z.object({ package: z.string() }),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     const npmPackage = await getPackageMetadata(event.package);
 
@@ -168,9 +169,10 @@ new Trigger({
   name: "Check for vulnerabilities every hour",
   on: scheduleEvent({
     rateOf: {
-      minutes: 1,
+      hours: 1,
     },
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     await ctx.sendEvent(`check.vulns`, {
       name: "check.vulns",

@@ -1,4 +1,4 @@
-import { slack } from "@trigger.dev/integrations";
+import * as slack from "@trigger.dev/slack";
 import { Trigger, webhookEvent } from "@trigger.dev/sdk";
 import { z } from "zod";
 import dotenv from "dotenv";
@@ -60,6 +60,7 @@ new Trigger({
       header: "X-Cal-Signature-256",
     },
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     //code here
     await slack.postMessage("send-to-slack", {
