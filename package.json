@@ -39,6 +39,7 @@
     "users-to-slack": "tsx src/examples/populate-slack-with-users.ts",
     "github-stars": "tsx src/examples/github-stars-to-slack.ts",
     "whatsapp": "tsx src/examples/whatsapp.ts",
+    "supabase-hooks": "tsx src/examples/supabase-hooks.ts",
     "healthcheck": "tsx src/examples/healthcheck.tsx",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts"
