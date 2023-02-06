@@ -35,6 +35,7 @@ new Trigger({
       message: z.string(),
     }),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   async run(event, context) {
     context.logger.debug(`The message is ${event.message}`);
     return;
@@ -43,8 +44,8 @@ new Trigger({
 
 async function sendEventAfterTenSeconds() {
   await new Promise((resolve) => setTimeout(resolve, 10000));
-  sendEvent("fire.important.event", {
-    name: "important.event",
+  await sendEvent("fire.important.event", {
+    name: "important.event", 
     payload: { message: "This was triggered from a custom event in code" },
   });
 }
