@@ -96,7 +96,7 @@ export const vulnerabilitySchema = z
   );
 
 const queryResponseSchema = z.object({
-  vulns: z.array(vulnerabilitySchema),
+  vulns: z.array(vulnerabilitySchema).optional(),
 });
 
 const batchQueryResponseSchema = z.object({
@@ -141,6 +141,7 @@ new Trigger({
     const { results } = await batchQueryVulnerabilitiesForPackage(npmPackage);
 
     for (const batchResult of results) {
+      if (!batchResult.vulns)continue;
       for (const vuln of batchResult.vulns) {
         // If any of the vuln.severity scores are critical, send a notification
         if (
