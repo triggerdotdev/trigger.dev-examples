@@ -18,6 +18,7 @@ new Trigger({
   id: "scheduled-healthcheck",
   name: "Scheduled healthcheck",
   logLevel: "info",
+  triggerTTL: 60,
   on: scheduleEvent({
     rateOf: {
       minutes: 1,
