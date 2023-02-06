@@ -73,7 +73,7 @@ new Trigger({
       return;
     }
 
-    if (firstAction.type === "button") {
+    if (firstAction.type === "button" && event.response_url) {
       const siteUrl = firstAction.value;
       const up = await isSiteUp(siteUrl);
       await slack.postMessageResponse("React to message", event.response_url, {
