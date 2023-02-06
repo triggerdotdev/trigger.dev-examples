@@ -24,6 +24,7 @@ const postMessage = new Trigger({
       paidPlan: z.boolean(),
     }),
   }),
+  endpoint: process.env.TRIGGER_ENDPOINT_URL,
   run: async (event, ctx) => {
     await ctx.logger.info("This log will appear on the Trigger.dev run page");
 
