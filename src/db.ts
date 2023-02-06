@@ -2,8 +2,8 @@
 export async function getUser(userId: string, hasOnboarded = false) {
   return {
     id: userId,
-    name: "James Ritchie",
-    email: "james@trigger.dev",
+    name: "Matt Aitken",
+    email: "matt@trigger.dev",
     hasOnboarded,
   };
 }
