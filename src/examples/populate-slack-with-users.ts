@@ -1,6 +1,8 @@
 import * as slack from "@trigger.dev/slack";
 import { customEvent, Trigger } from "@trigger.dev/sdk";
 import { z } from "zod";
+import dotenv from "dotenv";
+dotenv.config();
 
 const users = [
   { name: "Liam Johnson", email: "liam.johnson@github.com" },
