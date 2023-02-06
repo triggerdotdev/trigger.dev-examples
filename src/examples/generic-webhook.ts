@@ -9,6 +9,12 @@ const intl = new Intl.DateTimeFormat("en-US", {
   dateStyle: "full",
 });
 
+// 1. npm run webhook
+// 2. To test this workflow go to cal.com
+// 3. Go to Settings > Developer > Webhooks https://app.cal.com/settings/developer/webhooks
+// 4. Create a new webhook using the details from the Trigger.dev workflow
+// 5. Create a new booking and you should see a message in Slack
+
 new Trigger({
   id: "caldotcom-to-slack-2",
   name: "Cal.com To Slack 2",
