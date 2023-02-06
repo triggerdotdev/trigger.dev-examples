@@ -1,8 +1,8 @@
 /** @jsxImportSource jsx-slack */
 import * as slack from "@trigger.dev/slack";
 import { fetch, scheduleEvent, Trigger } from "@trigger.dev/sdk";
-import dotenv from "dotenv";
 import JSXSlack, { Actions, Blocks, Button, Section } from "jsx-slack";
+import dotenv from "dotenv";
 dotenv.config();
 
 const sites = [
