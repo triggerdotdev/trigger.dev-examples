@@ -5,6 +5,7 @@
   "description": "A set of examples of Trigger.dev workflows",
   "dependencies": {
     "@react-email/button": "^0.0.4",
+    "@react-email/column": "^0.0.6-canary.1",
     "@react-email/container": "^0.0.4",
     "@react-email/head": "^0.0.2",
     "@react-email/heading": "^0.0.5",
@@ -15,6 +16,7 @@
     "@react-email/preview": "^0.0.2",
     "@react-email/render": "^0.0.3",
     "@react-email/section": "^0.0.1",
+    "@react-email/tailwind": "^0.0.4",
     "@react-email/text": "^0.0.2",
     "@trigger.dev/github": "^0.1.19",
     "@trigger.dev/resend": "^0.1.19",
@@ -43,6 +45,7 @@
     "whatsapp-slack-support": "tsx src/examples/whatsapp-slack-support.tsx",
     "supabase-hooks": "tsx src/examples/supabase-hooks.ts",
     "healthcheck": "tsx src/examples/healthcheck.tsx",
+    "scheduled-pipedrive": "tsx src/examples/report/scheduled-pipedrive.tsx",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint . --ext .ts",
     "typecheck": "tsc --noEmit"
