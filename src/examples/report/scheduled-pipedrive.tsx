@@ -25,7 +25,12 @@ new Trigger({
       replyTo: "James <matt@trigger.dev>",
       to: "matt@trigger.dev",
       subject: `Pipedrive report: ${activeDeals?.length ?? 0} active deals`,
-      react: <ReportEmail pipeDriveDeals={activeDeals} />,
+      react: (
+        <ReportEmail
+          pipeDriveDeals={activeDeals}
+          stages={allDeals.body?.related_objects.stage}
+        />
+      ),
     });
 
     return;
@@ -88,11 +93,23 @@ const pipedriveDealsSchema = z.object({
       person_hidden: z.boolean().nullish(),
     })
   ),
+  related_objects: z.object({
+    stage: z.record(
+      z.object({
+        id: z.number(),
+        name: z.string(),
+      })
+    ),
+  }),
 });
 
 export type PipedriveDeal = z.infer<
   typeof pipedriveDealsSchema
 >["data"][number];
+
+export type PipedriveStages = z.infer<
+  typeof pipedriveDealsSchema
+>["related_objects"]["stage"];
 
 async function getPipedriveLeads() {
   return fetch(
