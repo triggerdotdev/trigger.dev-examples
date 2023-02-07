@@ -59,11 +59,9 @@ export function ReportEmail({
                     </Text>
                   </Column>
                   <Column>
-                    <Text className="text-white py-1 px-2 rounded-lg uppercase bg-slate-400 inline mr-2">
+                    <Text className="text-white text-xs py-1 px-2 rounded-lg uppercase bg-slate-400 inline mr-2">
                       {stage?.name}
                     </Text>
-                  </Column>
-                  <Column>
                     <Button
                       href={`https://triggerdev2.pipedrive.com/deal/${deal.id}`}
                       className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg"
