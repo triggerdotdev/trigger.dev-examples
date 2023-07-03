@@ -1,3 +1,7 @@
+:warning: This repository has been archived and will not work with Trigger.dev v2 
+
+---
+
 This repository has examples of [Trigger.dev](https://trigger.dev) being used.
 
 ## Installation
